@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:subscriptions-test;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+
+org:
+  jobrunr:
+    job-scheduler:
+      enabled: true
+    background-job-server:
+      enabled: false
+
+onno:
+  auth:
+    session:
+      remember-me:
+        allow-ephemeral-key: true
+    users:
+      - username: admin
+        password: admin
+        roles: [ADMIN]

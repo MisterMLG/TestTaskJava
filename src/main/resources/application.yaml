@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: subscriptions
+  datasource:
+    url: jdbc:h2:file:./data/subscriptions;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+
+org:
+  jobrunr:
+    job-scheduler:
+      enabled: true
+    background-job-server:
+      enabled: true
+    dashboard:
+      enabled: false
+
+onno:
+  ui:
+    locale: ru
+    messages:
+      "[form.select]": "Выберите..."
+      "[tab.new]": "Создание"
+      "[ref.new]": "Создать новый элемент"
+  auth:
+    session:
+      remember-me:
+        allow-ephemeral-key: true
+    users:
+      - username: admin
+        password: admin
+        roles: [ADMIN]
+      - username: manager
+        password: manager
+        roles: [MANAGER]
